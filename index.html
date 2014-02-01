@@ -42,20 +42,60 @@
         <!--
         <script>(function(a,b,c){if(c in b&&b[c]){var d,e=a.location,f=/^(a|html)$/i;a.addEventListener("click",function(a){d=a.target;while(!f.test(d.nodeName))d=d.parentNode;"href"in d&&(d.href.indexOf("http")||~d.href.indexOf(e.host))&&(a.preventDefault(),e.href=d.href)},!1)}})(document,window.navigator,"standalone")</script>
         -->
-
+        <script type="text/javascript" src="//use.typekit.net/svg8qay.js"></script>
+        <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+        <link rel="icon" href="favicon.png">
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/styles.css">
         <script src="js/vendor/modernizr-2.7.1.min.js"></script>
+                <script>
+function allowDrop(ev)
+{
+ev.preventDefault();
+}
+
+function drag(ev)
+{
+ev.dataTransfer.setData("Text",ev.target.id);
+}
+
+function drop(ev)
+{
+ev.preventDefault();
+var data=ev.dataTransfer.getData("Text");
+ev.target.appendChild(document.getElementById(data));
+}
+</script>
     </head>
     <body>
-
-        <!-- Add your site or application content here -->
+    	<div class="outerwrapper">
+    	<nav><div class="logo"><a><span>&lt;html5&gt;</span></a></div></nav>
+      <div class="wrapper">
+            <h1>Web Engineering II</h1>
+            <h2>Developing Mobile HTML5 Apps</h2>
+            <h3>Homework Assignment #1: Create simple app with <a href="">Mobile Boilerplate</a></h3>
+            <p>Hi, I'm Sonja from Mainz, a city somewhere in the middle of Germany.</p>
+            <div class="myvideo">
+                <video controls>
+                    <source src="videos/first_movie.mp4" type="video/mp4">
+                        <!--source src="videos/first_movie.ogg" type="video/ogg"-->
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <!--p>Drag the pin onto the map to see where I live;)</p>
+                <img id="drag1" draggable="true" ondragstart="drag(event)" width="30" height="30" src="images/pin.svg" />
+                <div class="map-container" id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div-->
+        </div>
+        </div>
+        <footer><div class="colophone-inner"><p>&copy;&nbsp;2014 Sonja Broda</p></div></footer>
 
         <script src="js/vendor/jquery-2.0.3.min.js"></script>
         <script src="js/helper.js"></script>
         <script src="js/main.js"></script>
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+        <!--
         <script>
             (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
             function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
@@ -63,6 +103,6 @@
             e.src='//www.google-analytics.com/analytics.js';
             r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
             ga('create','UA-XXXXX-X');ga('send','pageview');
-        </script>
+        </script>-->
     </body>
 </html>
