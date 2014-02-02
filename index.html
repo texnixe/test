@@ -75,11 +75,13 @@ ev.target.appendChild(document.getElementById(data));
             <h1>Web Engineering II</h1>
             <h2>Developing Mobile HTML5 Apps</h2>
             <h3>Homework Assignment #1: Create simple app with <a href="">Mobile Boilerplate</a></h3>
-            <p>Hello World, I'm Sonja from Mainz, a city somewhere in the middle of Germany.</p>
+            <p>Hello World, I'm Sonja from Mainz, a city somewhere in the middle of Germany. This is a very short video clip of the roundabouts as seen from a walk up the hill.</p>
             <div class="myvideo">
-                <video controls>
-                    <source src="videos/first_movie.mp4" type="video/mp4">
-                        <!--source src="videos/first_movie.ogg" type="video/ogg"-->
+                <video controls poster="images/mz.jpg">
+                    <source src="videos/intro.mp4" type="video/mp4">
+                    <source src="videos/intro.ogv" type='video/ogg; codecs="theora, vorbis"'>
+                    <source src="videos/intro.webm" type="video/webm">
+                        <track src="subtitles_en.vtt" kind="subtitles" srclang="en" label="English">
                         Your browser does not support the video tag.
                     </video>
                 </div>
